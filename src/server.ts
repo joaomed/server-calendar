@@ -7,6 +7,8 @@ import { convertMinutesToHoursString } from './utils/convert-minutes-to-hour-str
 
 const app = express()
 
+const port = process.env.PORT || 3333
+
 app.use(express.json())
 app.use(cors())
 
@@ -83,5 +85,7 @@ app.delete('/tarefas/:id', async (req, res) => {
   res.json(tarefa)
 })
 
-// localhost:3333/ads
-app.listen(3333)
+// localhost:3333/tarefas
+app.listen(port, () => {
+  console.info('Aplicação rodando em http://localhost:3333')
+})

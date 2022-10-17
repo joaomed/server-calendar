@@ -20,3 +20,9 @@ Calendar API
 - Editar tarefa
 - Remover tarefa
 - Campo de busca
+
+## Tecnologias 
+
+- NodeJS
+- Express & Prisma
+

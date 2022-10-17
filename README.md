@@ -1,11 +1,6 @@
-# eSports-server
+calendarApi
 
 ## Entidades
-
-### Area
-
-id
-name
 
 ### Tarefa
 
@@ -16,14 +11,12 @@ date
 hourStart
 hourEnd
 location
+createAt
 
 ## Casos de uso
 
-- Listagem de tarefas por dia
+- Listagem de tarefas 
 - Cadastrar tarefa
 - Editar tarefa
 - Remover tarefa
-- Visualizar tarefas por dia
-- Visualizar tarefas por semana
-- Visualizar tarefas por mês
-- Campo de buscar
+- Campo de busca

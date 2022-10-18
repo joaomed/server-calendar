@@ -1,4 +1,4 @@
-import express from 'express'
+import express, { NextFunction, Request, Response } from 'express'
 import cors from 'cors'
 
 import { PrismaClient } from '@prisma/client'
@@ -85,7 +85,7 @@ app.delete('/tarefas/:id', async (req, res) => {
   res.json(tarefa)
 })
 
-app.use(function (err, req, res, next) {
+app.use(function (err: Error, req: Request, res: Response, next: NextFunction) {
   res.status(500)
   res.send('Oops, something went wrong.')
 })

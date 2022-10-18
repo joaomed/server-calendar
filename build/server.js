@@ -80,6 +80,10 @@ app.delete('/tarefas/:id', (req, res) => __awaiter(void 0, void 0, void 0, funct
     });
     res.json(tarefa);
 }));
+app.use(function (err, req, res, next) {
+    res.status(500);
+    res.send('Oops, something went wrong.');
+});
 // localhost:3333/tarefas
 app.listen(port, () => {
     console.info('Aplicação rodando em http://localhost:3333');

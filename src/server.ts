@@ -5,6 +5,8 @@ import { PrismaClient } from '@prisma/client'
 import { convertHourStringToMinutes } from './utils/convert-hour-string-to-minutes'
 import { convertMinutesToHoursString } from './utils/convert-minutes-to-hour-string'
 
+import 'express-async-errors'
+
 const app = express()
 
 const port = process.env.PORT || 3333
@@ -86,6 +88,7 @@ app.delete('/tarefas/:id', async (req, res) => {
 })
 
 app.use(function (err: Error, req: Request, res: Response, next: NextFunction) {
+  console.log('aqui')
   res.status(500)
   res.send('Oops, something went wrong.')
 })

@@ -87,11 +87,11 @@ app.delete('/tarefas/:id', async (req, res) => {
   res.json(tarefa)
 })
 
-app.use(function (err: Error, req: Request, res: Response, next: NextFunction) {
-  console.log('aqui')
-  res.status(500)
-  res.send('Oops, something went wrong.')
-})
+// app.use(function (err: Error, req: Request, res: Response, next: NextFunction) {
+//   console.log('aqui')
+//   res.status(500)
+//   res.send('Oops, something went wrong.')
+// })
 
 // localhost:3333/tarefas
 app.listen(port, () => {
